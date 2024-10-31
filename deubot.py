@@ -89,7 +89,6 @@ def main():
     st.header("Merhaba ben DEUbot 🤖")
     st.subheader("Üniversitemiz hakkında ne öğrenmek istersin?")
 
-    # CSS ile sadece soru kutucuğunu ortalamak
     st.markdown("""
         <style>
         .centered-input {
@@ -102,13 +101,11 @@ def main():
         </style>
         """, unsafe_allow_html=True)
 
-    # Ortalanmış text input
     st.markdown('<div class="centered-input">', unsafe_allow_html=True)
     user_question = st.text_input("Sorunuzu Giriniz : ")
     st.markdown('</div>', unsafe_allow_html=True)
 
     if user_question:
-        # user_input fonksiyonunuzu çağırabilirsiniz.
         with st.spinner("Sorunuz işleniyor, lütfen bekleyin..."):
             user_input(user_question)
 
